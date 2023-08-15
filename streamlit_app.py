@@ -39,7 +39,7 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
-filename = 'code.py'
+filename = 'https://github.com/phaks323/My-analysis-bot/tree/master/code.py'
 
 with open(filename, 'w') as file:
     file.write(vv)       
