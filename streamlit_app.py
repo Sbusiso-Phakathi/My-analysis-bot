@@ -39,8 +39,8 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
-        filename = 'code.txt'
-        with open(filename, 'w') as file:
-            file.write(vv)       
+     
+        
+        st.markdown(exec(vv))    
 
     
