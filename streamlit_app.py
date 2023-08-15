@@ -42,7 +42,7 @@ if prompt := st.chat_input("What is up?"):
         a = file.write(vv)
         file.close()
         
-        st.markdown(vv) 
+        st.markdown(a) 
 
         
 
