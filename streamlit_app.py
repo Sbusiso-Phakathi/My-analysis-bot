@@ -40,13 +40,8 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
-        try:
-            f = open("my_file.txt", "a")
-            for num in range(100):
-                f.write("Line " + str(num) + "\n")
-            f.close()
-        except Exception:
-            print("Could not write to file")
+        v = """return 1 + 90"""
+        d = 
 
         # def extract_code(notebook_file, output_file):
         #         with open(notebook_file) as f:
