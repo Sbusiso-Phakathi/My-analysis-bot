@@ -41,19 +41,15 @@ if prompt := st.chat_input("What is up?"):
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
         def execute_code():
-            Code="""
-                def check_prime_no(num):
-                  for i in range(2, num):
-                     if (num % i) == 0:
-                        return "Not Prime" 
-                     else:
-                        return "Prime"
-                 """
-                
-            exec(Code)
+            Code="""for i in range(10):
+            # do something with each item
+             print("Item", i)
+         """
         
-        execute_code()
-        st.markdown(execute_code())
+            exec(Code)
+        d = execute_code()
+        st.markdown(d) 
+
 
         # def extract_code(notebook_file, output_file):
         #         with open(notebook_file) as f:
