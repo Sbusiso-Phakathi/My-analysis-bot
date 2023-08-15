@@ -40,7 +40,7 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
-       def execute_code():
+        def execute_code():
             Code="""import seaborn as sns
         import matplotlib.pyplot as plt
         
