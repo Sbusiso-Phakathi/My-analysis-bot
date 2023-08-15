@@ -48,7 +48,7 @@ if prompt := st.chat_input("What is up?"):
                         return "Not Prime" 
                      else:
                         return "Prime"
-                print(check_prime_no(12)) """
+                 """
                 
             exec(Code)
         
