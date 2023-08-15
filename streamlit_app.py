@@ -4,7 +4,7 @@ import openai
 import streamlit as st
 
 with st.sidebar:
-    st.title('🤖💬 SmatAnalysis App')
+    st.title('🤖💬 SmatAnalysis Appz')
     if 'OPENAI_API_KEY' in st.secrets:
         st.success('API key already provided!', icon='✅')
         openai.api_key = st.secrets['OPENAI_API_KEY']
