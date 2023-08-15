@@ -40,10 +40,20 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
-        d = "1 + 78"
-        f = eval(d)
-        st.markdown(f) 
-
+        def execute_code():
+            Code="""
+                def check_prime_no(num):
+                  for i in range(2, num):
+                     if (num % i) == 0:
+                        return "Not Prime" 
+                     else:
+                        return "Prime"
+                print(check_prime_no(12)) """
+                
+            exec(Code)
+        
+        execute_code()
+        st.markdown(execute_code())
 
         # def extract_code(notebook_file, output_file):
         #         with open(notebook_file) as f:
