@@ -40,8 +40,10 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
-        v = """return 1 + 90"""
-        d = 
+        d = """print('s')"""
+        f = exec(d)
+        st.markdown(f) 
+
 
         # def extract_code(notebook_file, output_file):
         #         with open(notebook_file) as f:
