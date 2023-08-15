@@ -42,7 +42,7 @@ if prompt := st.chat_input("What is up?"):
         st.markdown(vv) 
         def execute_code():
             Code="""import seaborn as sns
-        import matplotlib.pyplot as plt
+            import matplotlib.pyplot as plt
         
         # Sample data for the plot
         data = [3, 5, 1, 8, 2]
