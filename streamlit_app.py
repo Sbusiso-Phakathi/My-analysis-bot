@@ -40,16 +40,23 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
-        # def execute_code():
-        #     Code="""for i in range(10):
-        #     # do something with each item
-        #      print("Item", i)
-        #  """
+       def execute_code():
+            Code="""import seaborn as sns
+        import matplotlib.pyplot as plt
         
-        d = exec(vv)
-        # d = execute_code()
-        st.markdown(d) 
-
+        # Sample data for the plot
+        data = [3, 5, 1, 8, 2]
+        
+        # Loop through the data and create a plot for each item
+        for i in range(5):
+            plt.figure()  # Create a new figure for each plot
+            sns.barplot(x=[f'Item {i}'], y=[data[i]])  # Create the seaborn plot
+            plt.title(f'Plot {i+1}')  # Set a title for each plot
+            plt.show()  # Display the plot
+         """
+        
+            exec(Code)
+        d = execute_code()
 
         # def extract_code(notebook_file, output_file):
         #         with open(notebook_file) as f:
