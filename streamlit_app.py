@@ -41,7 +41,7 @@ if prompt := st.chat_input("What is up?"):
         with open("Output.py", "w") as text_file:
             text_file.write(vv)
         
-        st.markdown(a) 
+        st.markdown(text_file) 
 
         
 
