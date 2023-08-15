@@ -40,14 +40,14 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
-        def execute_code():
-            Code="""for i in range(10):
-            # do something with each item
-             print("Item", i)
-         """
+        # def execute_code():
+        #     Code="""for i in range(10):
+        #     # do something with each item
+        #      print("Item", i)
+        #  """
         
-            exec(Code)
-        d = execute_code()
+        d = exec(vv)
+        # d = execute_code()
         st.markdown(d) 
 
 
