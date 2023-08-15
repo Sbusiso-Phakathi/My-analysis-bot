@@ -40,8 +40,8 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
-        d = """print('s')"""
-        f = exec(d)
+        d = "1 + 78"
+        f = eval(d)
         st.markdown(f) 
 
 
