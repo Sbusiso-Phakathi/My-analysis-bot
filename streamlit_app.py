@@ -40,11 +40,11 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         vv = full_response.partition(":")[2].split('In')[0]
         st.markdown(vv) 
-        def extract_code(notebook_file, output_file):
-                with open(notebook_file) as f:
-                  nb = nbformat.read(f, as_version=4)
-                with open(output_file, "w") as f:
-                   for cell in nb.cells:
-                    if cell.cell_type == "code":
-                        f.write(cell.source + "\n")
-        extract_code("note.ipynb", "abc.py")
+        # def extract_code(notebook_file, output_file):
+        #         with open(notebook_file) as f:
+        #           nb = nbformat.read(f, as_version=4)
+        #         with open(output_file, "w") as f:
+        #            for cell in nb.cells:
+        #             if cell.cell_type == "code":
+        #                 f.write(cell.source + "\n")
+        # extract_code("note.ipynb", "abc.py")
