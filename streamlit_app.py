@@ -47,4 +47,4 @@ if prompt := st.chat_input("What is up?"):
                    for cell in nb.cells:
                     if cell.cell_type == "code":
                         f.write(cell.source + "\n")
-    
+        extract_code("note.ipynb", "abc.py")
