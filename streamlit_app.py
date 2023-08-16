@@ -38,31 +38,7 @@ if prompt := st.chat_input("What is up?"):
             message_placeholder.markdown(full_response + "▌")
         message_placeholder.markdown(full_response)
         st.session_state.messages.append({"role": "assistant", "content": full_response})
-        vv = full_response.partition(":")[2].split('In')[0]
+        vv = full_response.partition(":")[2].split('*')[0]
         st.markdown(vv) 
         def execute_code():
-            Code="""import seaborn as sns
-            import matplotlib.pyplot as plt
-        
-        # Sample data for the plot
-        data = [3, 5, 1, 8, 2]
-        
-        # Loop through the data and create a plot for each item
-        for i in range(5):
-            plt.figure()  # Create a new figure for each plot
-            sns.barplot(x=[f'Item {i}'], y=[data[i]])  # Create the seaborn plot
-            plt.title(f'Plot {i+1}')  # Set a title for each plot
-            plt.show()  # Display the plot
-         """
-        
-            exec(Code)
-        d = execute_code()
 
-        # def extract_code(notebook_file, output_file):
-        #         with open(notebook_file) as f:
-        #           nb = nbformat.read(f, as_version=4)
-        #         with open(output_file, "w") as f:
-        #            for cell in nb.cells:
-        #             if cell.cell_type == "code":
-        #                 f.write(cell.source + "\n")
-        # extract_code("note.ipynb", "abc.py")
