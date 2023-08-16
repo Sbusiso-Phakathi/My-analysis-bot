@@ -4,6 +4,11 @@
 import openai
 import streamlit as st
 import nbformat
+import streamlit as st
+import subprocess
+import sys
+
+subprocess.run([f"{sys.executable}", "script.py"])
 
 with st.sidebar:
     st.title('🤖💬 SmatAnalysis Appz')
