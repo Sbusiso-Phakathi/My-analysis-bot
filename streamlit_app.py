@@ -1,5 +1,5 @@
 # Code refactored from https://docs.streamlit.io/knowledge-base/tutorials/build-conversational-apps
-
+# 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
 import openai
 import streamlit as st
 import nbformat
