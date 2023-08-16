@@ -29,7 +29,7 @@ if prompt := st.chat_input("What is up?"):
         st.markdown(prompt)
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
-        full_response = ""
+        full_response = "" 
         for response in openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[{"role": m["role"], "content": m["content"]}
