@@ -8,7 +8,6 @@ import streamlit as st
 import subprocess
 import sys
 
-subprocess.run([f"{sys.executable}", "script.py"])
 
 with st.sidebar:
     st.title('🤖💬 SmatAnalysis Appz')
@@ -21,6 +20,8 @@ with st.sidebar:
             st.warning('Please enter your credentials!', icon='⚠️')
         else:
             st.success('Proceed to entering your prompt message!', icon='👉')
+            subprocess.run([f"{sys.executable}", "script.py"])
+
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
