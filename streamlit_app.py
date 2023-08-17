@@ -10,7 +10,7 @@ from io import StringIO
 import pandas as pd
 from github import Github
 import time
-import cv2
+# import cv2 as cv
 import glob
 import io
 
@@ -83,8 +83,8 @@ with open('script.py', 'w') as f:
 subprocess.run([f"{sys.executable}", "script.py"])
 
 
-for img in glob.glob("*.png"):
-    cv_img = cv2.imread(img)
-    st.image(cv_img, caption='Sunrise by the mountains')
+# for img in glob.glob("*.png"):
+#     cv_img = cv.imread(img)
+#     st.image(cv_img, caption='Sunrise by the mountains')
 
 
