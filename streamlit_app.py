@@ -9,6 +9,12 @@ import subprocess
 import sys
 from io import StringIO
 import pandas as pd
+from github import Github
+import time
+import cv2
+import glob
+import io
+
 
 with st.sidebar:
     st.title('🤖💬 SmatAnalysis Appz')
@@ -22,8 +28,18 @@ with st.sidebar:
 
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
+        g = Github('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')
+        repo = g.get_repo('phaks323/My-analysis-bot')
+
         df = pd.read_csv(uploaded_file)
         df.to_csv(user + '.csv')
+    
+        ts = time.time()
+        with open(user + '.csv', 'r') as file:
+            data = file.read()
+
+        repo.create_file(str(ts) + '.csv', 'upload csv', data, branch='master')
+
 
             
 
@@ -67,8 +83,7 @@ with open('script.py', 'w') as f:
                             f.write(line)
 subprocess.run([f"{sys.executable}", "script.py"])
 
-import cv2
-import glob
+
 for img in glob.glob("*.png"):
     cv_img = cv2.imread(img)
     st.image(cv_img, caption='Sunrise by the mountains')
