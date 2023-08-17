@@ -1,6 +1,6 @@
 # Code refactored from https://docs.streamlit.io/knowledge-base/tutorials/build-conversational-apps
 #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
-pip3 install PyGithub
+!pip3 install PyGithub
 import openai
 import streamlit as st
 import nbformat
