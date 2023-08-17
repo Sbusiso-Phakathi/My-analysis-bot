@@ -3,3 +3,4 @@ openai
 nbformat
 opencv-python
 seaborn
+PyGithub
