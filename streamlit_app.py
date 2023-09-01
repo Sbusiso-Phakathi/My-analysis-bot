@@ -27,7 +27,7 @@ with st.sidebar:
 
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
-        g = Github('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')
+        g = Github('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')
         repo = g.get_repo('phaks323/My-analysis-bot')
 
         df = pd.read_csv(uploaded_file)
