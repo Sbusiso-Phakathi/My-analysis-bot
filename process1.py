@@ -15,6 +15,7 @@ import io, os
 
 # Streamlit App Title
 st.title("Face Recognition Time Logger")
+credentials = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 
 # Get username from environment
 username = os.environ.get('USER')
@@ -38,7 +39,7 @@ else:
     st.stop()
 
 # Google Sheets authorization
-credentials = Credentials.from_service_account_file(f"/Users/{username}/Desktop/face/automatic-time-379113-5440df4089b9.json")
+# credentials = Credentials.from_service_account_file(f"/Users/{username}/Desktop/face/automatic-time-379113-5440df4089b9.json")
 scoped_credentials = credentials.with_scopes(["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"])
 gc = gspread.authorize(scoped_credentials)
 
