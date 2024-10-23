@@ -1,4 +1,5 @@
 streamlit
+ dlib-bin
 opencv-python
 face_recognition
 gspread
