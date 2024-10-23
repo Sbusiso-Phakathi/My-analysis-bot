@@ -15,7 +15,7 @@ import io, os
 
 # Streamlit App Title
 st.title("Face Recognition Time Logger")
-credentials = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+credentials = os.getenv('secretsforface')
 
 # Get username from environment
 username = os.environ.get('USER')
