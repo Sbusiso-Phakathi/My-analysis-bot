@@ -1,6 +1,9 @@
 streamlit
-openai
-nbformat
 opencv-python
-seaborn
-PyGithub
+face_recognition
+gspread
+google-auth
+pandas
+Pillow
+requests
+numpy
