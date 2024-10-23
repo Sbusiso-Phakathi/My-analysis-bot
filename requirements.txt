@@ -1,4 +1,6 @@
 streamlit
+cmake==3.25.2
+dlib==19.24.2
 dlib-bin
 opencv-python
 face_recognition
